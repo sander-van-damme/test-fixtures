@@ -59,7 +59,11 @@ jobs:
               parts = ["<ul>"]
               for item in children:
                   rel_path = item.relative_to(root).as_posix()
-                  if item.is_dir():
+                  if item.is_symlink():
+                      parts.append(
+                          f"<li>🔗 <a href=\"{escape(path_to_url(rel_path, False))}\">{escape(item.name)}</a></li>"
+                      )
+                  elif item.is_dir():
                       parts.append(
                           f"<li>📁 <a href=\"{escape(path_to_url(rel_path, True))}\">{escape(item.name)}/</a>"
                           f"{build_tree(item)}</li>"
