@@ -1,0 +1,153 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//Mac OS X 10.15.7//EN
+X-WR-CALNAME:Persoonlijk
+X-WR-TIMEZONE:Europe/Brussels
+X-WR-CALDESC:Persoonlijke agenda van Lena
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:Europe/Brussels
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:yoga-wekelijks-2025@lena.privé
+SUMMARY:Yoga - De Nieuwe Kazerne
+DTSTART;TZID=Europe/Brussels:20250108T193000
+DTEND;TZID=Europe/Brussels:20250108T203000
+DTSTAMP:20250102T120000Z
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20251217T225959Z
+DESCRIPTION:Hatha yoga les. Yogamat meebrengen. Instructeur: Sofie.
+LOCATION:De Nieuwe Kazerne\, Arendsbergstraat 2\, 9000 Gent
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:verjaardag-thomas-2025@lena.privé
+SUMMARY:🎂 Verjaardag Thomas
+DTSTART;VALUE=DATE:20250214
+DTEND;VALUE=DATE:20250215
+DTSTAMP:20240901T000000Z
+RRULE:FREQ=YEARLY
+DESCRIPTION:Cadeau idee: boek over architectuur of voucher Fnac
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Thomas zijn verjaardag is morgen!
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:dokter-huisarts-20250219@lena.privé
+SUMMARY:Dokter Pieters - bloedafname
+DTSTART;TZID=Europe/Brussels:20250219T083000
+DTEND;TZID=Europe/Brussels:20250219T090000
+DTSTAMP:20250210T140000Z
+DESCRIPTION:Nuchter komen. Neem verzekeringskaart mee.
+LOCATION:Huisartsenpraktijk Pieters\, Brugsesteenweg 118\, 9000 Gent
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Herinnering: dokter om 8:30 - nuchter!
+TRIGGER:-PT12H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:weekend-brugge-20250301@lena.privé
+SUMMARY:Weekend Brugge met mama
+DTSTART;VALUE=DATE:20250301
+DTEND;VALUE=DATE:20250303
+DTSTAMP:20250115T190000Z
+DESCRIPTION:Hotel De Orangerie gereserveerd. Check-in: zaterdag 15u\, check-out: zondag 12u.\nProgramma: Groeningemuseum zaterdag\, Minnewaterpark en chocoladewinkels zondag.
+LOCATION:Brugge\, West-Vlaanderen
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:huurcontract-verlenging-20250315@lena.privé
+SUMMARY:Huurcontract ondertekenen ⚠️
+DTSTART;TZID=Europe/Brussels:20250315T100000
+DTEND;TZID=Europe/Brussels:20250315T103000
+DTSTAMP:20250301T090000Z
+DESCRIPTION:Huurcontract verlenging voor appartement Sleepstraat. Verhuurder: dhr. Van Acker. Meebrengen: identiteitskaart en bankrekeningnummer.
+LOCATION:Kantoor Van Acker Vastgoed\, Kortrijksesteenweg 48\, 9000 Gent
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Vergeet identiteitskaart niet!
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:paasbrunch-familie-20250420@lena.privé
+SUMMARY:Paasbrunch bij oma
+DTSTART;TZID=Europe/Brussels:20250420T110000
+DTEND;TZID=Europe/Brussels:20250420T150000
+DTSTAMP:20250401T180000Z
+DESCRIPTION:Paasbrunch bij oma Ria. Ik maak de cake. Thomas brengt wijn mee.
+LOCATION:Acacialaan 7\, 9090 Melle
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:gentsefeesten-vrijwilligersshift-20250712@lena.privé
+SUMMARY:Gentse Feesten - vrijwilligersshift Balthazar
+DTSTART;TZID=Europe/Brussels:20250712T160000
+DTEND;TZID=Europe/Brussels:20250712T230000
+DTSTAMP:20250601T120000Z
+DESCRIPTION:Vrijwilligersdienst aan de bar bij Podium Balthazar. Contactpersoon: Lieve (0478 xx xx xx). Kom 30 min vroeger.
+LOCATION:Podium Balthazar\, Vlasmarkt\, 9000 Gent
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tandarts-controle-20250903@lena.privé
+SUMMARY:Tandarts - jaarlijkse controle
+DTSTART;TZID=Europe/Brussels:20250903T141500
+DTEND;TZID=Europe/Brussels:20250903T150000
+DTSTAMP:20250801T090000Z
+DESCRIPTION:Reiniging + röntgenfoto's. Dr. An Bogaert.
+LOCATION:Tandartspraktijk Bogaert\, Woodrow Wilsonplein 4\, 9000 Gent
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:concert-bazart-20251017@lena.privé
+SUMMARY:Concert Bazart - Sportpaleis
+DTSTART;TZID=Europe/Brussels:20251017T200000
+DTEND;TZID=Europe/Brussels:20251017T230000
+DTSTAMP:20250501T183000Z
+DESCRIPTION:Tickets gekocht! Rij 12\, plaatsen 34-35. Met Thomas. Trein 18:42 Gent-Antwerpen terug om 23:38.
+LOCATION:Sportpaleis\, Schijnpoortweg 119\, 2170 Merksem (Antwerpen)
+URL:https://www.sportpaleis.be
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:oudejaarsavond-20251231@lena.privé
+SUMMARY:Oudejaarsavond bij Jonas & Silke
+DTSTART;TZID=Europe/Brussels:20251231T200000
+DTEND;VALUE=DATE:20260101
+DTSTAMP:20251201T120000Z
+DESCRIPTION:Diner + vuurwerk kijken aan de Gentse Feestzaal. Iedereen brengt een gerecht mee. Ik maak tiramisu.
+LOCATION:Wondelgemstraat 56\, 9000 Gent
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

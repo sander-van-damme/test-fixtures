@@ -1,0 +1,188 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Microsoft Corporation//Outlook 16.0 MIMEDIR//EN
+X-WR-CALNAME:Werk - Lena De Moor
+X-WR-TIMEZONE:Europe/Brussels
+X-WR-CALDESC:Werkagenda Lena De Moor @ Codifly BV
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:Europe/Brussels
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=3
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYDAY=-1SU;BYMONTH=10
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:standup-team-alpha-2025@codifly.be
+SUMMARY:Daily standup - Team Alpha
+DTSTART;TZID=Europe/Brussels:20250106T093000
+DTEND;TZID=Europe/Brussels:20250106T094500
+DTSTAMP:20250102T083000Z
+RRULE:FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR;UNTIL=20251231T225959Z
+DESCRIPTION:Kort standup: wat deed je gisteren\, wat doe je vandaag\, blockers?\n\nLink: https://meet.google.com/abc-defg-hij
+LOCATION:https://meet.google.com/abc-defg-hij
+STATUS:CONFIRMED
+ORGANIZER;CN=Pieter Janssens:MAILTO:pieter.janssens@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Robbe Smet:MAILTO:robbe.smet@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Yasmine Benali:MAILTO:yasmine.benali@codifly.be
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:sprint-planning-s1-2025@codifly.be
+SUMMARY:Sprint Planning - Sprint 1 (2025)
+DTSTART;TZID=Europe/Brussels:20250106T100000
+DTEND;TZID=Europe/Brussels:20250106T120000
+DTSTAMP:20250102T090000Z
+DESCRIPTION:Sprint 1 planning voor het Artevelde-project.\n\nAgenda:\n- Review backlog prioriteiten\n- Story point estimaties\n- Sprint goal bepalen\n\nJira board: https://codifly.atlassian.net/jira/software/projects/ART
+LOCATION:Vergaderzaal Gainsborough\, Codifly BV\, Dok-Noord 4C\, 9000 Gent
+STATUS:CONFIRMED
+ORGANIZER;CN=Pieter Janssens:MAILTO:pieter.janssens@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Robbe Smet:MAILTO:robbe.smet@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Yasmine Benali:MAILTO:yasmine.benali@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Diederik Claes:MAILTO:diederik.claes@codifly.be
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:klantmeeting-artevelde-20250115@codifly.be
+SUMMARY:Klantmeeting Arteveldehogeschool - Kick-off fase 2
+DTSTART;TZID=Europe/Brussels:20250115T140000
+DTEND;TZID=Europe/Brussels:20250115T160000
+DTSTAMP:20250108T100000Z
+DESCRIPTION:Kick-off meeting voor fase 2 van het studentenportaal.\n\nContacten bij klant:\n- Nathalie Vermeersch (projectverantwoordelijke)\n- Bram De Cock (IT)\n\nDeck meesturen na de meeting.
+LOCATION:Arteveldehogeschool\, Hoogpoort 15\, 9000 Gent
+STATUS:CONFIRMED
+ORGANIZER;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Pieter Janssens:MAILTO:pieter.janssens@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Nathalie Vermeersch:MAILTO:n.vermeersch@arteveldehs.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;CN=Bram De Cock:MAILTO:b.decock@arteveldehs.be
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Klantmeeting over 30 min - deck klaar?
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:1on1-pieter-weekly-2025@codifly.be
+SUMMARY:1-op-1 met Pieter
+DTSTART;TZID=Europe/Brussels:20250110T111500
+DTEND;TZID=Europe/Brussels:20250110T120000
+DTSTAMP:20250103T090000Z
+RRULE:FREQ=WEEKLY;BYDAY=FR;UNTIL=20251231T225959Z
+DESCRIPTION:Wekelijkse 1-op-1 met mijn manager. Agenda: lopende projecten\, feedback\, loopbaanpaden.
+LOCATION:Kantoor Pieter / Google Meet
+STATUS:CONFIRMED
+ORGANIZER;CN=Pieter Janssens:MAILTO:pieter.janssens@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:tech-talk-graphql-20250122@codifly.be
+SUMMARY:Tech Talk: GraphQL Federation best practices
+DTSTART;TZID=Europe/Brussels:20250122T120000
+DTEND;TZID=Europe/Brussels:20250122T130000
+DTSTAMP:20250113T094500Z
+DESCRIPTION:Maandelijkse tech talk georganiseerd door Robbe.\nSandwich-lunch voorzien.\n\nSlides na afloop beschikbaar op Confluence.
+LOCATION:Open Space\, Codifly BV\, Dok-Noord 4C\, 9000 Gent
+STATUS:CONFIRMED
+ORGANIZER;CN=Robbe Smet:MAILTO:robbe.smet@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:sprint-review-s2-20250131@codifly.be
+SUMMARY:Sprint Review + Retro - Sprint 2
+DTSTART;TZID=Europe/Brussels:20250131T140000
+DTEND;TZID=Europe/Brussels:20250131T163000
+DTSTAMP:20250124T090000Z
+DESCRIPTION:Sprint 2 Review (14:00-15:00) + Retrospective (15:00-16:30)\n\nReview: demo nieuwe zoekmodule en dashboardcomponenten\nRetro: Mad / Sad / Glad format\n\nRemote deelnemers: Google Meet link wordt verstuurd
+LOCATION:Vergaderzaal Gainsborough\, Codifly BV\, Dok-Noord 4C\, 9000 Gent
+STATUS:CONFIRMED
+ORGANIZER;CN=Pieter Janssens:MAILTO:pieter.janssens@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Robbe Smet:MAILTO:robbe.smet@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Yasmine Benali:MAILTO:yasmine.benali@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=OPT-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Nathalie Vermeersch:MAILTO:n.vermeersch@arteveldehs.be
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:offsite-team-dag-20250214@codifly.be
+SUMMARY:Team offsite - Antwerpen
+DTSTART;TZID=Europe/Brussels:20250214T090000
+DTEND;TZID=Europe/Brussels:20250214T180000
+DTSTAMP:20250201T112000Z
+DESCRIPTION:Jaarlijkse teamdag.\nOchtend: strategie sessie + OKR-review\nMiddag: teamlunch Restaurant Fiskebar\nNamiddag: escape room + borrel\n\nVerplaatsing: bedrijfsbus vertrekt om 8:45 aan het kantoor.
+LOCATION:Antwerpen (details volgen)
+STATUS:CONFIRMED
+ORGANIZER;CN=Diederik Claes:MAILTO:diederik.claes@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:verlof-pasen-20250418@codifly.be
+SUMMARY:Verlof ✈️
+DTSTART;VALUE=DATE:20250418
+DTEND;VALUE=DATE:20250423
+DTSTAMP:20250301T140000Z
+DESCRIPTION:Goedgekeurd door Pieter op 01/03. Vakantie Portugal.
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:security-audit-prep-20250512@codifly.be
+SUMMARY:GEANNULEERD: Security audit voorbereiding
+DTSTART;TZID=Europe/Brussels:20250512T100000
+DTEND;TZID=Europe/Brussels:20250512T120000
+DTSTAMP:20250509T083000Z
+DESCRIPTION:Geannuleerd - audit uitgesteld naar Q3. Nieuwe datum TBD.
+STATUS:CANCELLED
+SEQUENCE:2
+ORGANIZER;CN=Yasmine Benali:MAILTO:yasmine.benali@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=DECLINED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:conf-devoxx-be-20251008@codifly.be
+SUMMARY:Devoxx Belgium - dag 1
+DTSTART;TZID=Europe/Brussels:20251008T090000
+DTEND;TZID=Europe/Brussels:20251008T180000
+DTSTAMP:20250601T100000Z
+RRULE:FREQ=DAILY;COUNT=3
+DESCRIPTION:Devoxx Belgium conferentie in Antwerpen. Ticket + hotel goedgekeurd.\n\nSessions van interesse:\n- Keynote (dag 1)\n- Spring Boot 4 deep dive\n- AI-assisted coding workflows
+LOCATION:Metropolis\, Groenendaallaan 394\, 2030 Antwerpen
+URL:https://devoxx.be
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:jaarlijkse-evaluatie-20251125@codifly.be
+SUMMARY:Jaarlijkse evaluatie - Lena De Moor
+DTSTART;TZID=Europe/Brussels:20251125T140000
+DTEND;TZID=Europe/Brussels:20251125T150000
+DTSTAMP:20251101T090000Z
+DESCRIPTION:Jaarlijkse functioneringsgesprek met Pieter Janssens.\n\nVoorbereiding: zelfbeoordeling invullen via HR-portaal vóór 20/11.
+LOCATION:Kantoor Pieter Janssens\, Codifly BV\, Dok-Noord 4C\, 9000 Gent
+STATUS:CONFIRMED
+ORGANIZER;CN=Pieter Janssens:MAILTO:pieter.janssens@codifly.be
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Lena De Moor:MAILTO:lena.demoor@codifly.be
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Zelfbeoordeling al ingevuld?
+TRIGGER:-P5D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
