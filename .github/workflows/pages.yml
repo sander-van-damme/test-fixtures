@@ -62,7 +62,7 @@ jobs:
                   if item.is_symlink():
                       try:
                           target_is_dir = item.resolve(strict=False).is_dir()
-                      except OSError:
+                      except Exception:
                           target_is_dir = False
                       display_name = f"{item.name}/" if target_is_dir else item.name
                       parts.append(
@@ -85,8 +85,8 @@ jobs:
           html = f"""<!DOCTYPE html>
           <html lang="en">
           <head>
-            <meta charset="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>{escape(repo_name)} index</title>
             <style>
               body {{ font-family: system-ui, -apple-system, sans-serif; margin: 2rem; line-height: 1.4; }}
