@@ -71,12 +71,14 @@ jobs:
               parts.append("</ul>")
               return "".join(parts)
 
+          repo_name = os.environ["REPO_NAME"]
+
           html = f"""<!DOCTYPE html>
           <html lang="en">
           <head>
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <title>test-fixtures index</title>
+            <title>{escape(repo_name)} index</title>
             <style>
               body {{ font-family: system-ui, -apple-system, sans-serif; margin: 2rem; line-height: 1.4; }}
               ul {{ list-style: none; margin: 0; padding-left: 1.25rem; }}
@@ -86,7 +88,7 @@ jobs:
             </style>
           </head>
           <body>
-            <h1>test-fixtures</h1>
+            <h1>{escape(repo_name)}</h1>
             <p>Base URL: <a href="{escape(base_url)}/">{escape(base_url)}/</a></p>
             <h2>Files and directories</h2>
             {build_tree(root)}
