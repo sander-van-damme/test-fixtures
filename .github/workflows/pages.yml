@@ -105,7 +105,7 @@ jobs:
           </html>
           """
 
-          Path("index.html").write_text(html, encoding="utf-8")
+          (root / "index.html").write_text(html, encoding="utf-8")
           PY
 
       - name: Upload artifact
