@@ -28,6 +28,75 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Generate index.html
+        env:
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from html import escape
+          from pathlib import Path
+          from urllib.parse import quote
+
+          root = Path(".").resolve()
+          base_url = f"https://{os.environ['REPO_OWNER']}.github.io/{os.environ['REPO_NAME']}"
+          excluded = {".git"}
+
+          def path_to_url(relative_path: str, is_dir: bool) -> str:
+              encoded = "/".join(quote(part) for part in relative_path.split("/"))
+              suffix = "/" if is_dir else ""
+              return f"{base_url}/{encoded}{suffix}"
+
+          def build_tree(directory: Path) -> str:
+              children = sorted(
+                  (item for item in directory.iterdir() if item.name not in excluded),
+                  key=lambda item: (item.is_file(), item.name.lower()),
+              )
+              if not children:
+                  return ""
+
+              parts = ["<ul>"]
+              for item in children:
+                  rel_path = item.relative_to(root).as_posix()
+                  if item.is_dir():
+                      parts.append(
+                          f"<li>📁 <a href=\"{escape(path_to_url(rel_path, True))}\">{escape(item.name)}/</a>"
+                          f"{build_tree(item)}</li>"
+                      )
+                  else:
+                      parts.append(
+                          f"<li>📄 <a href=\"{escape(path_to_url(rel_path, False))}\">{escape(item.name)}</a></li>"
+                      )
+              parts.append("</ul>")
+              return "".join(parts)
+
+          html = f"""<!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>test-fixtures index</title>
+            <style>
+              body {{ font-family: system-ui, -apple-system, sans-serif; margin: 2rem; line-height: 1.4; }}
+              ul {{ list-style: none; margin: 0; padding-left: 1.25rem; }}
+              li {{ margin: 0.2rem 0; }}
+              a {{ color: #0969da; text-decoration: none; }}
+              a:hover {{ text-decoration: underline; }}
+            </style>
+          </head>
+          <body>
+            <h1>test-fixtures</h1>
+            <p>Base URL: <a href="{escape(base_url)}/">{escape(base_url)}/</a></p>
+            <h2>Files and directories</h2>
+            {build_tree(root)}
+          </body>
+          </html>
+          """
+
+          Path("index.html").write_text(html, encoding="utf-8")
+          PY
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
